@@ -1,9 +1,9 @@
 public class CafeCustomer {
 
-    private int customerId;
-    private String firstName;
-    private String lastName;
-    private String email;
+    private static int customerId;
+    private static String firstName;
+    private static String lastName;
+    private static String email;
 
     public CafeCustomer(int customerId, String firstName, String lastName, String email) {
         this.customerId = customerId;
