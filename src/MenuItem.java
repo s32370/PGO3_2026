@@ -22,12 +22,14 @@ public class MenuItem {
 
     @Override
     public String toString() {
+            return
 //an overridden toString(),
 
     }
-
+/// ==========comeback later
     @Override
     public String equals(){
+            if (this.code == code)
            // /an overridden equals() comparing products by code.
     }
 
