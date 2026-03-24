@@ -13,24 +13,36 @@ public class MenuItem {
             this.category = category;
             productCount++;
 }
+    public String getCode() {
+        return code;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     //a static method returning the number of created products,
-
-
     public static int getProductCount() {
         return productCount;
     }
 
     @Override
     public String toString() {
-            return
-//an overridden toString(),
+            return "MenuItem{" +
+                    "code='" + code + '\'' +
+                    ", name='" + name + '\'' +
+                    ", price=" + price +
+                    ", category='" + category + '\'' +
+                    '}';
 
     }
-/// ==========comeback later
     @Override
     public String equals(){
-            if (this.code == code)
-           // /an overridden equals() comparing products by code.
+        if (this == obj) return true;
+        if (!(obj instanceof MenuItem)) return false;
+
+        MenuItem other = (MenuItem) obj;
+        return this.code.equals(other.code);
     }
 
 }

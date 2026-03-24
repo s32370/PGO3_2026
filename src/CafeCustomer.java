@@ -13,20 +13,26 @@ public class CafeCustomer {
     }
 //a method returning full customer data
     public static getCustomerData(){
-        System.out.println(customerId);
-        System.out.println(firstName);
-        System.out.println(lastName);
-        System.out.println(email);
+        return customerId + " - " + firstName + " " + lastName + " (" + email + ")";
     }
 
     @Override
     public String toString() {
+        return "Customer{" +
+                "id=" + customerId +
+                ", name='" + firstName + " " + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
 
     }
 
     @Override
-    public String equals(){
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof CafeCustomer)) return false;
 
-    }
+        CafeCustomer other = (CafeCustomer) obj;
+        return this.customerId == other.customerId ||
+                this.email.equals(other.email);
 
 }
